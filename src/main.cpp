@@ -44,7 +44,12 @@ int main(int argc, char *argv[]) {
 		camera.y = player.getWorldPos().y - (WINDOW_HEIGHT / 2); /* Centralize around Y axis. */
 
         /* Function to render the background texture at coordinates X, Y. */
-        window.render(0, 0, backgroundTxt);
+        window.render(camera.x+1280/2, camera.y+720/2, backgroundTxt);
+
+        /* Update player and render. Camera is sent in to calculate screenPosition. */
+        player.update(deltaTime, camera);
+        player.render();
+        
         
         window.display();
 

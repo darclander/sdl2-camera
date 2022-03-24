@@ -41,8 +41,8 @@ void Player::update(double deltaTime, SDL_Rect camera) {
 
     const Uint8 *key_state = SDL_GetKeyboardState(NULL);
 
-    pos.x = worldPos.x - camera.x;
-    pos.y = worldPos.y - camera.y;
+    screenPos.x = worldPos.x - camera.x;
+    screenPos.y = worldPos.y - camera.y;
 
     Vector2 prevPos = worldPos;
     if(key_state[SDL_SCANCODE_S]) {
