@@ -24,6 +24,8 @@ int main(int argc, char *argv[]) {
     Window window = Window("SDL2 Camera", WINDOW_WIDTH, WINDOW_HEIGHT);
     SDL_Texture *backgroundTxt = window.loadTexture("../gfx/background.png");
 
+    Player player = Player(window.getRenderer(), 0, 0, "../gfx/player.png");
+
     bool running = true;
 
     SDL_Rect camera = {0, 0, WINDOW_WIDTH, WINDOW_HEIGHT};
@@ -37,7 +39,9 @@ int main(int argc, char *argv[]) {
 
         window.clear();
 
-        
+        /* Update camera position. */
+        camera.x = player.getWorldPos().x - (WINDOW_WIDTH / 2); /* Centralize around X axis. */
+		camera.y = player.getWorldPos().y - (WINDOW_HEIGHT / 2); /* Centralize around Y axis. */
 
         /* Function to render the background texture at coordinates X, Y. */
         window.render(0, 0, backgroundTxt);
