@@ -25,6 +25,7 @@ int main(int argc, char *argv[]) {
     SDL_Texture *backgroundTxt = window.loadTexture("../gfx/background.png");
 
     Player player = Player(window.getRenderer(), 0, 0, "../gfx/player.png");
+    Tile tile = Tile(window.getRenderer(), -(WINDOW_WIDTH/2), -(WINDOW_HEIGHT/2), "../gfx/tile.png");
 
     bool running = true;
 
@@ -50,6 +51,8 @@ int main(int argc, char *argv[]) {
         player.update(deltaTime, camera);
         player.render();
         
+        tile.update(camera);
+        tile.render();
         
         window.display();
 
