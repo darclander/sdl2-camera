@@ -9,7 +9,7 @@ Window::Window(const char* title, int w, int h) {
         std::cout << "Could not init window, Error: " << SDL_GetError() << std::endl;
     }
 
-    renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
+    renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_PRESENTVSYNC);
 	worldPos.x = 0;
 	worldPos.y = 0;
 
