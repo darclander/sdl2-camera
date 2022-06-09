@@ -40,7 +40,8 @@ void Player::render() {
 void Player::update(double deltaTime, SDL_Rect camera) {
 
     const Uint8 *key_state = SDL_GetKeyboardState(NULL);
-
+    
+    /* Update position relative to camera. */
     screenPos.x = worldPos.x - camera.x;
     screenPos.y = worldPos.y - camera.y;
 
