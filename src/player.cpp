@@ -23,8 +23,7 @@ void Player::render() {
     SDL_Rect src; 
 	src.x = 0;
 	src.y = 0;
-	src.w;
-	src.h;
+
 
 	SDL_QueryTexture(texture, NULL, NULL, &src.w, &src.h);
 
@@ -45,7 +44,7 @@ void Player::update(double deltaTime, SDL_Rect camera) {
     screenPos.x = worldPos.x - camera.x;
     screenPos.y = worldPos.y - camera.y;
 
-    Vector2 prevPos = worldPos;
+    // Vector2 prevPos = worldPos;
     if(key_state[SDL_SCANCODE_S]) {
         worldPos = worldPos.operator+(Vector2(0, 1*0.1*deltaTime));
     }

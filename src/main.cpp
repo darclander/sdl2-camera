@@ -1,6 +1,6 @@
-#include<iostream>
+#include <iostream>
 
-#include<SDL2/SDL.h>
+#include <SDL2/SDL.h>
 
 #include "window.hpp"
 #include "player.hpp"
@@ -67,5 +67,5 @@ int main(int argc, char *argv[]) {
 			}
 		}
     }
-
+    return 0;
 }

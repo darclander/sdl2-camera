@@ -3,7 +3,7 @@
 #include <cmath>
 #include <iostream>
 
-/*
+/**
  * https://codereview.stackexchange.com/questions/26608/review-of-2d-vector-class
  */
 
